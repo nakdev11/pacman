@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>パックマン風ゲーム</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,8 +14,17 @@
         </div>
         <canvas id="gameCanvas" width="400" height="400"></canvas>
         <div class="game-controls">
-            <p>矢印キーで移動</p>
+            <p class="control-text">矢印キーで移動</p>
             <button id="startButton" class="start-btn">START</button>
+        </div>
+        
+        <div id="touchControls" class="touch-controls">
+            <button id="upBtn" class="control-btn up-btn">↑</button>
+            <div class="horizontal-controls">
+                <button id="leftBtn" class="control-btn left-btn">←</button>
+                <button id="rightBtn" class="control-btn right-btn">→</button>
+            </div>
+            <button id="downBtn" class="control-btn down-btn">↓</button>
         </div>
     </div>
 

@@ -39,6 +39,32 @@ class Game {
         this.startButton.addEventListener('click', () => {
             this.restartGame();
         });
+        
+        this.setupTouchControls();
+    }
+    
+    setupTouchControls() {
+        const upBtn = document.getElementById('upBtn');
+        const downBtn = document.getElementById('downBtn');
+        const leftBtn = document.getElementById('leftBtn');
+        const rightBtn = document.getElementById('rightBtn');
+        
+        const addTouchEvents = (button, direction) => {
+            button.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                this.player.setDirection(direction);
+            });
+            
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.player.setDirection(direction);
+            });
+        };
+        
+        addTouchEvents(upBtn, 'up');
+        addTouchEvents(downBtn, 'down');
+        addTouchEvents(leftBtn, 'left');
+        addTouchEvents(rightBtn, 'right');
     }
     
     restartGame() {
