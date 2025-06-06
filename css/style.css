@@ -193,19 +193,48 @@ body {
     }
 }
 
-/* iPhone 13 mini and similar tall screens */
-@media (max-width: 428px) and (min-height: 800px) {
+/* iPhone 13 mini specific adjustments */
+@media (max-width: 390px) and (min-height: 844px) {
     #gameCanvas {
-        max-height: 40vh;
+        max-height: 38vh;
+        max-width: 90vw;
+    }
+    
+    .game-header {
+        margin-bottom: 8px;
+    }
+    
+    .game-header h1 {
+        font-size: 17px;
+        margin: 0 0 4px 0;
+    }
+    
+    .score {
+        font-size: 13px;
+    }
+    
+    .game-controls {
+        margin-top: 8px;
+    }
+    
+    .start-btn {
+        padding: 6px 14px;
+        font-size: 13px;
+        margin-top: 4px;
     }
     
     .touch-controls {
-        margin-top: 10px;
-        gap: 6px;
+        margin-top: 8px;
+        gap: 5px;
     }
     
     .control-btn {
-        width: 48px;
-        height: 48px;
+        width: 46px;
+        height: 46px;
+        font-size: 19px;
+    }
+    
+    .horizontal-controls {
+        gap: 55px;
     }
 }
