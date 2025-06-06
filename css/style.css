@@ -192,3 +192,20 @@ body {
         gap: 50px;
     }
 }
+
+/* iPhone 13 mini and similar tall screens */
+@media (max-width: 428px) and (min-height: 800px) {
+    #gameCanvas {
+        max-height: 40vh;
+    }
+    
+    .touch-controls {
+        margin-top: 10px;
+        gap: 6px;
+    }
+    
+    .control-btn {
+        width: 48px;
+        height: 48px;
+    }
+}
